@@ -10,9 +10,9 @@
     
     <target id="haxe">
         <section if="android">
-            <lib name='${LINC_LUA_PATH}/ndll/Android/libluajit-v7.so' if='HXCPP_ARM64' />
-            <lib name='${LINC_LUA_PATH}/ndll/Android/libluajit-v7-5.1.so.2' if='HXCPP_ARM64' />
-            <lib name='${LINC_LUA_PATH}/ndll/Android/libluajit-64.so' if='HXCPP_ARMV7' />
+            <lib name='${LINC_LUA_PATH}/ndll/Android/libluajit-v7.so' if='HXCPP_ARMV7' />
+            <lib name='${LINC_LUA_PATH}/ndll/Android/libluajit-v7-5.1.so.2' if='HXCPP_ARMV7' />
+            <lib name='${LINC_LUA_PATH}/ndll/Android/libluajit-64.so' if='HXCPP_ARM64' />
             <lib name='${LINC_LUA_PATH}/ndll/Android/libluajit-x86.so' if='HXCPP_X86' />
             <lib name='${LINC_LUA_PATH}/ndll/Android/libluajit-x86_64.so' if='HXCPP_X86_64' />
         </section>
