@@ -1,0 +1,19 @@
+<xml>
+    <files id='haxe'>
+        <compilerflag value='-I${LINC_LUA_PATH}/linc/'/>
+        <file name='${LINC_LUA_PATH}linc/linc_lua.cpp' />
+    </files>
+
+    <files id="__main__">
+        <compilerflag value='-I${LINC_LUA_PATH}linc/'/>
+    </files>
+    
+    <target id="haxe">
+        <section if="android">
+            <lib name='${LINC_LUA_PATH}/ndll/Android/arm64/libluajit.so' if='HXCPP_ARM64' />
+            <lib name='${LINC_LUA_PATH}/ndll/Android/arm/libluajit.so' if='HXCPP_ARMV7' />
+            <lib name='${LINC_LUA_PATH}/ndll/Android/x86/libluajit.so' if='HXCPP_X86' />
+            <lib name='${LINC_LUA_PATH}/ndll/Android/x86_64/libluajit.so' if='HXCPP_X86_64' />
+        </section>
+    </target>
+</xml>
